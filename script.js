@@ -41,9 +41,26 @@ function taskdone(id) {
   document.getElementById(id).classList.toggle("done");
 }
 function Priority(id){
-  var user_priority = prompt("Enter Priority Level");
+  var user_priority = parseInt(prompt("Enter Priority Level\n 1 - Highest Priority\n 2 - Medium Priority\n 3 - Low Priority\n 0 - Reset"));
+  switch(user_priority) {
+    case 0:
+      document.getElementById(id).style.color =  'black' ;
+      break;
+    case 1:
+      document.getElementById(id).style.color =  'red' ;
+      break;
+    case 2:
+      document.getElementById(id).style.color =  'green' ;
+      break;
+    case 3:
+      document.getElementById(id).style.color =  'rgb(216, 235, 52)' ;
+      break;
+    default:
+      prompt("Sorry, enter from the following options!");
+    
+  }
   if(user_priority == '1'){
-    document.getElementById(id).style.color =  'red' ;
+    
   }
   if(user_priority === '2'){
     document.getElementById(id).style.color =  'green';
