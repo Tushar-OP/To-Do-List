@@ -4,36 +4,43 @@
     <title>Javascript + DOM</title>
     <link href="https://fonts.googleapis.com/css?family=Handlee|Jomolhari|Kaushan+Script&display=swap|Leckerli+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Belleza&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Merienda&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css" />
-    
   </head>
   <body>
-    <div class="header">
-      <img src="PNGs/fogg-welcome-2-crop.jpg" alt="hi">
-      <h2>Hello <br />Welcome to a new and productive day with To-to-Do!</h2>
-    </div>
+      <h2 class="header">Welcome<br>To New
+      &  Productive Day <br>With <span> To-to-Do!</span> </h2>
+      
+   <div class="welcm-img">
+    <img src="PNGs/fogg-welcome-2-crop.jpg" alt="" id="welcm">
+   </div>
 
     <a href="#todolist" class="float">
-      <img src="_ionicons_svg_md-arrow-round-down.svg" alt="">
+      <img src="_ionicons_svg_md-arrow-round-down.svg" alt="" title="Go to To-Dos">
     </a>
-    <div class="clearfix">
-      <img src="PNGs/abstract-list-is-empty.png" alt="" style="width: 70%; height: 95vh; float: left;">
-      <span>Write down the all the tasks you need to cover, because affirmation is a good quality</span>
-    </div>
-    <br>
-    <div class="clearfix" style="height: 100vh;">
-      <img src="PNGs/checklist.png" alt="" style="height: 70vh; float: right;">
-      <span>Keep tabs on the task, don't miss out!</span>
-    </div>
-    <br>
-    <div class="clearfix" style="height: 100vh;">
-      <img src="PNGs/done-1.png" alt="done" style="height: 90vh; width: 50%; float: left;">
-      <span>Complete all the tasks! </span> 
-    </div>
-    <div class="clearfix" style="width: 100%; height: 100vh;">
-      <img src="PNGs/eastwood-done.png" alt="" style="max-width: 90vh; margin: auto; display: block;">
-    </div>
 
+    <div class="grid">
+        <div class="rotate">
+          <img src="img1.png" alt="" id="rotate-img">
+        </div>
+        <img src="PNGs/abstract-list-is-empty.png" alt="" id="svgs1">
+    </div>
+      <div class="grid">
+          <img src="PNGs/checklist.png" alt=""id="svgs2">
+          <div class="rotate2">
+            <img src="img2.png" alt="" id="rotate-img">
+          </div>
+      </div>
+      <div class="grid">
+          <div class="rotate">
+            <img src="img4.png" alt="" id="rotate-img">
+          </div>
+          <img src="PNGs/done-1.png" alt=""id="svgs3">
+      </div>
+    
+    <div class="grid">
+      <img src="" alt="">
+    </div>
     <div id="todolist">
       <h1>ToDo List</h1>
       <br><br>
