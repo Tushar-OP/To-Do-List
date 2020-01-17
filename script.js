@@ -37,9 +37,11 @@ function addListAfterKeypress(event) {
 function DelTask(taskname) {
   ul.removeChild(document.getElementById(taskname));
 }
+
 function taskdone(id) {
-  document.getElementById(id).classList.toggle("done");
+  document.getElementById(id).firstElementChild.classList.toggle("done");
 }
+
 function Priority(id){
   var user_priority = parseInt(prompt("Enter Priority Level\n 1 - Highest Priority\n 2 - Medium Priority\n 3 - Low Priority\n 0 - Reset"));
   switch(user_priority) {

@@ -24,6 +24,10 @@
   display: table;
 } */
 
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -32,18 +36,14 @@ body {
   margin: 0;
 }
 
-.done {
-  text-decoration: line-through;
-}
-
-ul {
+/* ul {
   white-space: nowrap;
   overflow-x: auto;
   overflow-y: hidden;
-}
+} */
 
 ul > div {
-  max-width: fit-content;
+  /* max-width: fit-content; */
   overflow: hidden;
   list-style: none;
 }
@@ -57,6 +57,23 @@ li {
   font-family: 'Handlee', cursive;
   display: inline-block;
   list-style-position: inside;
+  cursor: pointer;
+  position: relative;
+  padding: 12px 40px 12px 8px;
+  /* background: #eee; */
+  font-size: 18px;
+  transition: 0.2s;
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 95%;
+}
+
+li:hover {
+  background: #ddd;
 }
 
 .float{
@@ -77,8 +94,9 @@ li {
   object-fit: cover;
   text-align: center;
   display:block;
-    margin:auto;
+  margin:auto;
 }
+
 .header{
   font-family: 'Kaushan Script', cursive;
   text-align: center;
@@ -93,30 +111,38 @@ span{
   grid-template-columns: 1fr 1fr;
   padding-left: 40px;
 }
+
 .rotate{
   transition: 1s ease-in-out;
 }
+
 .rotate2{
   transition: 1s ease-in-out;
 }
+
 .rotate2:hover{
   transform: translate(0, 3em);
 }
+
 .rotate:hover{
   transform: translate(3em,0);
 }
+
 #svgs1{
   width: 557px;
   object-fit: cover;
 }
+
 #svgs2{
   width: 300px;
   object-fit: cover;
 }
+
 #svgs3{
   width: 600px;
   object-fit: cover;
 }
+
 @media screen and (max-width:1214px) and (min-width:1040px){
   #svgs1{
     width: 457px;
@@ -134,7 +160,11 @@ span{
     width: 500px;
     object-fit: cover;
   }
+  .text > p {
+    font-size: 40px;
+  }
 }
+
 @media screen and (max-width:1039px) and (min-width:933px){
   #svgs1{
     width: 420px;
@@ -155,7 +185,11 @@ span{
   .header{
     font-size: 40px;
   }
+  .text > p {
+    font-size: 36px;
+  }
 }
+
 @media screen and (max-width:932px)  and (min-width:727px){
   #svgs1{
     width: 380px;
@@ -176,8 +210,12 @@ span{
   .header{
     font-size: 38px;
   }
+  .text > p {
+    font-size: 32px;
+  }
 }
-@media screen and (max-width:932px)  and (min-width:678px){
+
+@media screen and (max-width:726px)  and (min-width:678px){
   #svgs1{
     width: 280px;
     object-fit: cover;
@@ -197,7 +235,12 @@ span{
   .header{
     font-size: 34px;
   }
+  .text > p {
+    color: aqua;
+    font-size: 30px;
+  }
 }
+
 @media screen and (max-width:677px){
   #svgs1{
     width: 220px;
@@ -222,7 +265,11 @@ span{
   .header{
     font-size: 30px;
   }
+  .text > p {
+    font-size: 28px;
+  }
 }
+
 @media screen and (max-width:609px){
   #welcm{
     width: 200px;
@@ -234,3 +281,54 @@ span{
   }
 }
 
+.new_grid {
+  display: grid;
+  grid-template-columns:30% 69%;
+  gap: 1%;
+}
+
+.text {
+  font-family: 'Kaushan Script', cursive;
+  padding-left: 40px;
+  padding-top: 120px;
+  font-size: 40px;
+}
+
+.img {
+  display: block;
+}
+
+.img > img {
+  /* object-fit: cover; */
+  display: block;
+  width: 95%;
+  height: 95%;
+  margin: 0 auto;
+}
+
+.borderlist {
+  list-style-position: inside;
+  border: 1px solid black;
+  width: 75%;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+
+
+/* New */
+
+.grid-img{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+.grid-img > img{
+  width: 500px;
+  object-fit:cover;
+}
+.grid-img > p{
+  font-size: 30px;
+}
