@@ -325,10 +325,24 @@ span{
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
 }
-.grid-img > img{
-  width: 500px;
-  object-fit:cover;
+.grid-img > img {
+  object-fit: cover;
+  width: 100%;
 }
 .grid-img > p{
-  font-size: 30px;
+  font-size: 32px;
+  text-align: center;
+  font-family: 'Kaushan Script', cursive;
+  margin-top:130px;
+}
+
+@media screen and (max-width:1220px){
+  .grid-img > img{
+    width: 480px;
+    object-fit:cover;
+  }
+  .grid-img > p{
+    font-size: 28px;
+    margin-top:130px;
+  }
 }
