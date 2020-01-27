@@ -1,4 +1,4 @@
-var button = document.getElementById("enter");
+var button = document.getElementById("user-btn");
 var input = document.getElementById("userinput");
 var ul = document.querySelector("ul");
 
@@ -8,16 +8,19 @@ function inputLength() {
 
 function createListElement() {
   var div = document.createElement("div");
-  var btn = document.createElement("button");
+  var a = document.createElement("a");
   var li = document.createElement("li");
+  var i = document.createElement('i');
+  i.setAttribute("class","far fa-check-circle");
   li.appendChild(document.createTextNode(input.value));
-  btn.appendChild(document.createTextNode("Delete"));
+  a.appendChild(i);
   div.setAttribute("id", input.value);
+  div.setAttribute("class","borderlist");
   li.setAttribute("onclick", "taskdone(this.parentElement.id)");
-  btn.setAttribute("onclick", "DelTask(this.parentElement.id)");
+  a.setAttribute("onclick", "DelTask(this.parentElement.id)");
   li.setAttribute("ondblclick", "Priority(this.parentElement.id)");
   div.appendChild(li);
-  div.appendChild(btn);
+  div.appendChild(a);
   ul.appendChild(div);
   input.value = "";
 }
@@ -74,6 +77,7 @@ function Priority(id){
     document.getElementById(id).style.color =  'black' ;
   }
 }
+
 button.addEventListener("click", addListAfterClick);
 
 input.addEventListener("keypress", addListAfterKeypress);

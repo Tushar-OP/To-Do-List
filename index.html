@@ -5,67 +5,74 @@
     <link href="https://fonts.googleapis.com/css?family=Handlee|Jomolhari|Kaushan+Script&display=swap|Leckerli+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Belleza&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Merienda&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/17c4c4d488.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
-   <div class="welcm-img">
-    <img src="imgs/welcm.png" alt="">
-   </div>
-
-    <a href="#todolist" class="float">
-      <img src="_ionicons_svg_md-arrow-round-down.svg" alt="" title="Go to To-Dos">
-    </a>  
-    <br>
-    <div class="grid-img">
-      <img src="imgs/galymzhan-abdugalimov-ICW6QYOcdlg-unsplash.jpg" alt="">
-      <p>Write down all the tasks you need to complete, because affirmation is a good quality!</p>
-      
-      <p>Keep tabs on the task, don't miss out</p>
-      <img src="imgs/glenn-carstens-peters-RLw-UC03Gwc-unsplash.jpg" alt="">
-      
-      <img src="imgs/isaac-smith-8XlMU62ii8I-unsplash.jpg" alt="">
-      <p>Complete all the task </p>
-    </div>
+    <div class="whole">
+      <div class="welcm-img">
+        <img src="imgs/welcm.png" alt="">
+       </div>
     
-    <div class="grid">
-      <img src="" alt="">
+        <!-- scroll arrow -->
+        <a href="#todolist" class="float">
+          <img src="_ionicons_svg_md-arrow-round-down.svg" alt="" title="Go to To-Dos">
+        </a>  
+        <br>
+    
+        <!-- image grids -->
+        <div class="grid-img">
+          <img src="imgs/galymzhan-abdugalimov-ICW6QYOcdlg-unsplash.jpg" alt="">
+          <p>Write down all the tasks you need to complete, because affirmation is a good quality!</p>
+          
+          <p>Keep tabs on the task, don't miss out</p>
+          <img src="imgs/glenn-carstens-peters-RLw-UC03Gwc-unsplash.jpg" alt="">
+          
+          <img src="imgs/isaac-smith-8XlMU62ii8I-unsplash.jpg" alt="">
+          <p>Complete all the task </p>
+        </div>
+        
+        <!-- TODO List -->
+    
+        <div id="todolist">
+          <h1 style="text-align: center;">ToDo List</h1>
+          <div class="input-box">
+            <input id="userinput" type="text" placeholder="Enter the task" />
+            <button href="" id="user-btn"><i class="fas fa-check"></i></button>
+          </div>
+          <ul>
+            <div id="Notebook" class="borderlist">
+              <li onclick="taskdone(this.parentElement.id)" ondblclick="Priority(this.parentElement.id)">Notebook</li>
+              <a onclick="DelTask(this.parentElement.id)"><i class="far fa-check-circle"></i></a>
+            </div>
+            <div id="Jello" class="borderlist">
+              <li onclick="taskdone(this.parentElement.id)" ondblclick="Priority(this.parentElement.id)">Jello</li>
+              <a onclick="DelTask(this.parentElement.id)"><i class="far fa-check-circle"></i></button>
+            </div>
+            <div id="Spinach" class="borderlist">
+              <li onclick="taskdone(this.parentElement.id)" ondblclick="Priority(this.parentElement.id)">Spinach</li>
+              <a onclick="DelTask(this.parentElement.id)"><i class="far fa-check-circle"></i></button>
+            </div>
+            <div id="Rice" class="borderlist">
+              <li onclick="taskdone(this.parentElement.id)" ondblclick="Priority(this.parentElement.id)">Rice</li>
+              <a onclick="DelTask(this.parentElement.id)"><i class="far fa-check-circle"></i></button>
+            </div>
+            <div id="Birthday Cake" class="borderlist">
+              <li onclick="taskdone(this.parentElement.id)" ondblclick="Priority(this.parentElement.id)">Birthday Cake</li>
+              <a onclick="DelTask(this.parentElement.id)"><i class="far fa-check-circle"></i></button>
+            </div>
+            <div id="Candles" class="borderlist">
+              <li onclick="taskdone(this.parentElement.id)" ondblclick="Priority(this.parentElement.id)">Candles</li>
+              <a onclick="DelTask(this.parentElement.id)"><i class="far fa-check-circle"></i></button>
+            </div>
+            <div id="Book" class="borderlist">
+              <li onclick="taskdone(this.parentElement.id)" ondblclick="Priority(this.parentElement.id)">Book</li>
+              <a onclick="DelTask(this.parentElement.id)"><i class="far fa-check-circle"></i></button>
+            </div>
+          </ul>
+        </div>
     </div>
-    <div id="todolist">
-      <h1>ToDo List</h1>
-      <br><br>
-      <input id="userinput" type="text" placeholder="Enter" />
-      <button id="enter">Enter</button>
-      <ul>
-        <div id="Notebook" class="borderlist">
-          <li onclick="taskdone(this.parentElement.id)" ondblclick="Priority(this.parentElement.id)">Notebook</li>
-          <button onclick="DelTask(this.parentElement.id)">X</button>
-        </div>
-        <div id="Jello" class="borderlist">
-          <li onclick="taskdone(this.parentElement.id)" ondblclick="Priority(this.parentElement.id)">Jello</li>
-          <button onclick="DelTask(this.parentElement.id)">X</button>
-        </div>
-        <div id="Spinach" class="borderlist">
-          <li onclick="taskdone(this.parentElement.id)" ondblclick="Priority(this.parentElement.id)">Spinach</li>
-          <button onclick="DelTask(this.parentElement.id)">X</button>
-        </div>
-        <div id="Rice" class="borderlist">
-          <li onclick="taskdone(this.parentElement.id)" ondblclick="Priority(this.parentElement.id)">Rice</li>
-          <button onclick="DelTask(this.parentElement.id)">X</button>
-        </div>
-        <div id="Birthday Cake" class="borderlist">
-          <li onclick="taskdone(this.parentElement.id)" ondblclick="Priority(this.parentElement.id)">Birthday Cake</li>
-          <button onclick="DelTask(this.parentElement.id)">X</button>
-        </div>
-        <div id="Candles" class="borderlist">
-          <li onclick="taskdone(this.parentElement.id)" ondblclick="Priority(this.parentElement.id)">Candles</li>
-          <button onclick="DelTask(this.parentElement.id)">X</button>
-        </div>
-        <div id="Book" class="borderlist">
-          <li onclick="taskdone(this.parentElement.id)" ondblclick="Priority(this.parentElement.id)">Book</li>
-          <button onclick="DelTask(this.parentElement.id)">X</button>
-        </div>
-      </ul>
-    </div>
+   
     <script type="text/javascript" src="script.js"></script>
   </body>
 </html>

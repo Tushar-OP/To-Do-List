@@ -15,8 +15,16 @@ ul > div {
   /* max-width: fit-content; */
   overflow: hidden;
   list-style: none;
+  margin: 0 auto;
 }
 
+ul {
+  position: absolute;
+  top: 107%;
+  width: 100%;
+  padding-inline-start: 0;
+  
+}
 
 h1 {
   font-family: 'Kaushan Script', cursive;
@@ -41,7 +49,7 @@ li {
   width: 95%;
 }
 
-li:hover {
+ul>div:hover {
   background: #ddd;
 }
 
@@ -57,12 +65,7 @@ li:hover {
 	text-align:center;
 	box-shadow: 2px 2px 3px #999;
 }
-/* .header{
-  font-family: 'Kaushan Script', cursive;
-  text-align: center;
-  font-size: 43px;
-  margin:0;
-} */
+
 span{
   font-size: 56x;
   color:rgb(6, 158, 120);
@@ -86,7 +89,6 @@ span{
 }
 
 .img > img {
-  /* object-fit: cover; */
   display: block;
   width: 95%;
   height: 95%;
@@ -97,6 +99,7 @@ span{
   list-style-position: inside;
   border: 1px solid black;
   width: 75%;
+  border-radius: 10px;
 }
 
 .done {
@@ -110,6 +113,7 @@ span{
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
 }
+
 .grid-img > img {
   width:100%;
   object-fit: cover;
@@ -127,11 +131,21 @@ span{
     font-size: 28px;
     margin-top:90px;
   }
+
+  .float {
+    width: 40px;
+    height: 40px;
+  }
 }
 @media screen and (max-width:761px) and (min-width:603px){
   .grid-img > p{
     font-size: 24px;
     margin-top:60px;
+  }
+
+  .float {
+    width: 38px;
+    height: 38px;
   }
 }
 @media screen and (max-width:601px) and (min-width:522px){
@@ -139,11 +153,21 @@ span{
     font-size: 20px;
     margin-top:40px;
   }
+
+  .float {
+    width: 36px;
+    height: 36px;
+  }
 }
 @media screen and (max-width:521px) and (min-width:400px){
   .grid-img > p{
     font-size: 17px;
     margin-top:30px;
+  }
+
+  .float {
+    width: 34px;
+    height: 34px;
   }
 }
 @media screen and (max-width:399px){
@@ -151,8 +175,66 @@ span{
     font-size: 13px;
     margin-top:10px;
   }
+
+  .float {
+    width: 32px;
+    height: 32px;
+  }
 }
+
 .welcm-img > img{
   object-fit:cover;
   width:100%;
+}
+
+.whole {
+  position: relative;
+}
+
+.input-box {
+  position: absolute;
+  top: 105%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #2c3e50;
+  height: 50px;
+  border-radius: 40px;
+  padding: 10px;
+}
+
+.input-box:hover > #userinput {
+  width: 240px;
+}
+
+.input-box:hover > #user-btn {
+  background: white;
+}
+
+#user-btn {
+  color: #f39c12;
+  float: right;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #2c3e50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#userinput {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: white;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 30px;
+  width: 0px;
+  font-weight: bold;
 }
